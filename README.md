@@ -1,8 +1,13 @@
 ---
-# For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
-# Doc / guide: https://huggingface.co/docs/hub/model-cards
-{}
+library_name: transformers
+tags:
+  - healthcare
+  - doctor-patient interaction
+  - fine-tuning
+  - LoRA
+  - quantization
 ---
+
 
 # Model Card for Model ID
 
