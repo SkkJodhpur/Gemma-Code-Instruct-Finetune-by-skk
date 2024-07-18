@@ -13,13 +13,6 @@ tags:
 
 Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization
 
-library_name: transformers
-tags: ["healthcare", "doctor-patient interaction", "fine-tuning", "LoRA", "quantization"]
-Model Card for Fine-Tuned GEMMA-2B
-Model Details
-Model Description
-This model is a fine-tuned version of GEMMA-2B, adapted specifically for doctor-patient interaction tasks. Fine-tuning was performed using Low-Rank Adaptation (LoRA) and 4-bit quantization for efficient model adaptation. The model aims to facilitate improved, context-aware, and relevant interactions in medical consultations, enhancing communication and understanding between healthcare providers and patients.
-
 
 ## Model Details
 
