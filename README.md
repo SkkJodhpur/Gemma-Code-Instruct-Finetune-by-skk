@@ -1,199 +1,61 @@
 ---
-library_name: transformers
-tags: []
+# For reference on model card metadata, see the spec: https://github.com/huggingface/hub-docs/blob/main/modelcard.md?plain=1
+# Doc / guide: https://huggingface.co/docs/hub/model-cards
+{}
 ---
 
 # Model Card for Model ID
 
-<!-- Provide a quick summary of what the model is/does. -->
+Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization
 
+library_name: transformers
+tags: ["healthcare", "doctor-patient interaction", "fine-tuning", "LoRA", "quantization"]
+Model Card for Fine-Tuned GEMMA-2B
+Model Details
+Model Description
+This model is a fine-tuned version of GEMMA-2B, adapted specifically for doctor-patient interaction tasks. Fine-tuning was performed using Low-Rank Adaptation (LoRA) and 4-bit quantization for efficient model adaptation. The model aims to facilitate improved, context-aware, and relevant interactions in medical consultations, enhancing communication and understanding between healthcare providers and patients.
 
 
 ## Model Details
 
 ### Model Description
 
-<!-- Provide a longer summary of what this model is. -->
-
-This is the model card of a 🤗 transformers model that has been pushed on the Hub. This model card has been automatically generated.
-
-- **Developed by:** [More Information Needed]
-- **Funded by [optional]:** [More Information Needed]
-- **Shared by [optional]:** [More Information Needed]
-- **Model type:** [More Information Needed]
-- **Language(s) (NLP):** [More Information Needed]
-- **License:** [More Information Needed]
-- **Finetuned from model [optional]:** [More Information Needed]
+Developed by: Shailesh Kumar Khanchandani
+Shared by: Shailesh Kumar Khanchandani
+Model type: Causal Language Model
+Language(s) (NLP): English
+License: Apache-2.0
+Finetuned from model: google/gemma-2b
 
 ### Model Sources [optional]
 
-<!-- Provide the basic links for the model. -->
+Repository: Fine-Tuned GEMMA-2B
+Paper: [More Information Needed]
+Demo: [More Information Needed]
 
-- **Repository:** [More Information Needed]
-- **Paper [optional]:** [More Information Needed]
-- **Demo [optional]:** [More Information Needed]
-
-## Uses
-
-<!-- Address questions around how the model is intended to be used, including the foreseeable users of the model and those affected by the model. -->
 
 ### Direct Use
 
-<!-- This section is for the model use without fine-tuning or plugging into a larger ecosystem/app. -->
+The model is intended for direct use in generating contextually appropriate responses for doctor-patient interactions. It can be used in virtual assistants, chatbots, and other medical consultation platforms to assist healthcare providers in communicating with patients.
 
-[More Information Needed]
 
 ### Downstream Use [optional]
 
-<!-- This section is for the model use when fine-tuned for a task, or when plugged into a larger ecosystem/app -->
+The model can be further fine-tuned for specific medical specialties or customized to fit the unique requirements of different healthcare systems.
 
-[More Information Needed]
 
 ### Out-of-Scope Use
 
-<!-- This section addresses misuse, malicious use, and uses that the model will not work well for. -->
+The model is not intended for use in generating medical advice or diagnoses without human oversight. It should not be used in any scenario where critical health decisions are made solely based on its outputs.
 
-[More Information Needed]
 
 ## Bias, Risks, and Limitations
 
-<!-- This section is meant to convey both technical and sociotechnical limitations. -->
+The model inherits biases present in the training data. Users should be cautious of potential biases and inaccuracies, particularly in sensitive medical contexts.
 
-[More Information Needed]
 
 ### Recommendations
 
-<!-- This section is meant to convey recommendations with respect to the bias, risk, and technical limitations. -->
+Users should ensure that outputs are reviewed by qualified healthcare professionals before being utilized in a clinical setting. Continuous monitoring and updating of the model with diverse and representative data can help mitigate biases.
 
-Users (both direct and downstream) should be made aware of the risks, biases and limitations of the model. More information needed for further recommendations.
 
-## How to Get Started with the Model
-
-Use the code below to get started with the model.
-
-[More Information Needed]
-
-## Training Details
-
-### Training Data
-
-<!-- This should link to a Dataset Card, perhaps with a short stub of information on what the training data is all about as well as documentation related to data pre-processing or additional filtering. -->
-
-[More Information Needed]
-
-### Training Procedure
-
-<!-- This relates heavily to the Technical Specifications. Content here should link to that section when it is relevant to the training procedure. -->
-
-#### Preprocessing [optional]
-
-[More Information Needed]
-
-
-#### Training Hyperparameters
-
-- **Training regime:** [More Information Needed] <!--fp32, fp16 mixed precision, bf16 mixed precision, bf16 non-mixed precision, fp16 non-mixed precision, fp8 mixed precision -->
-
-#### Speeds, Sizes, Times [optional]
-
-<!-- This section provides information about throughput, start/end time, checkpoint size if relevant, etc. -->
-
-[More Information Needed]
-
-## Evaluation
-
-<!-- This section describes the evaluation protocols and provides the results. -->
-
-### Testing Data, Factors & Metrics
-
-#### Testing Data
-
-<!-- This should link to a Dataset Card if possible. -->
-
-[More Information Needed]
-
-#### Factors
-
-<!-- These are the things the evaluation is disaggregating by, e.g., subpopulations or domains. -->
-
-[More Information Needed]
-
-#### Metrics
-
-<!-- These are the evaluation metrics being used, ideally with a description of why. -->
-
-[More Information Needed]
-
-### Results
-
-[More Information Needed]
-
-#### Summary
-
-
-
-## Model Examination [optional]
-
-<!-- Relevant interpretability work for the model goes here -->
-
-[More Information Needed]
-
-## Environmental Impact
-
-<!-- Total emissions (in grams of CO2eq) and additional considerations, such as electricity usage, go here. Edit the suggested text below accordingly -->
-
-Carbon emissions can be estimated using the [Machine Learning Impact calculator](https://mlco2.github.io/impact#compute) presented in [Lacoste et al. (2019)](https://arxiv.org/abs/1910.09700).
-
-- **Hardware Type:** [More Information Needed]
-- **Hours used:** [More Information Needed]
-- **Cloud Provider:** [More Information Needed]
-- **Compute Region:** [More Information Needed]
-- **Carbon Emitted:** [More Information Needed]
-
-## Technical Specifications [optional]
-
-### Model Architecture and Objective
-
-[More Information Needed]
-
-### Compute Infrastructure
-
-[More Information Needed]
-
-#### Hardware
-
-[More Information Needed]
-
-#### Software
-
-[More Information Needed]
-
-## Citation [optional]
-
-<!-- If there is a paper or blog post introducing the model, the APA and Bibtex information for that should go in this section. -->
-
-**BibTeX:**
-
-[More Information Needed]
-
-**APA:**
-
-[More Information Needed]
-
-## Glossary [optional]
-
-<!-- If relevant, include terms and calculations in this section that can help readers understand the model or model card. -->
-
-[More Information Needed]
-
-## More Information [optional]
-
-[More Information Needed]
-
-## Model Card Authors [optional]
-
-[More Information Needed]
-
-## Model Card Contact
-
-[More Information Needed]
