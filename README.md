@@ -47,15 +47,37 @@ Users should ensure that outputs are reviewed by qualified healthcare profession
 Use the code below to get started with the model:
 
 # python
+from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
-from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_id = "skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk"
-tokenizer = AutoTokenizer.from_pretrained(model_id)
-model = AutoModelForCausalLM.from_pretrained(model_id)
+def generate_text(prompt):
+    # Model and tokenizer initialization
+    model_name = "skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk"
+    tokenizer = AutoTokenizer.from_pretrained(model_name)
+    model = AutoModelForCausalLM.from_pretrained(model_name, torch_dtype=torch.float16)
 
-text = "input: Hi, my baby was given the BCG vaccine..."
-inputs = tokenizer(text, return_tensors="pt").to("cuda:0")
+    # Move model to GPU if available
+    device = "cuda" if torch.cuda.is_available() else "cpu"
+    model = model.to(device)
 
-outputs = model.generate(**inputs, max_new_tokens=100)
-print(tokenizer.decode(outputs[0], skip_special_tokens=True))
+        # Tokenize input
+    input_ids = tokenizer.encode(f"<s>[INST] {prompt} [/INST]", return_tensors="pt").to(device)
+
+    # Generate text
+    with torch.no_grad():
+        output = model.generate(
+            input_ids,
+            max_length=200,
+            num_return_sequences=1,
+            do_sample=True,
+            temperature=0.7,
+        )
+
+    # Decode and return the generated text
+    generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
+    return generated_text
+    # Example usage
+    prompt = "Write a Python function to calculate the factorial of a number."
+    response = generate_text(prompt)
+    print("Generated response:")
+    print(response)
