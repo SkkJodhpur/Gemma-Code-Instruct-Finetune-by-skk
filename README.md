@@ -50,7 +50,7 @@ Use the code below to get started with the model:
 import torch
 from transformers import AutoTokenizer, AutoModelForCausalLM
 
-model_id = "skkjodhpur/gemma-Code-Instruct-Finetune-test"
+model_id = "skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk"
 tokenizer = AutoTokenizer.from_pretrained(model_id)
 model = AutoModelForCausalLM.from_pretrained(model_id)
 
