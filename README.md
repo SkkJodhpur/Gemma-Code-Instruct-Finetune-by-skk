@@ -18,11 +18,11 @@ Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation 
 # Model Description
 This model is a fine-tuned version of GEMMA-2B, adapted specifically for doctor-patient interaction tasks. Fine-tuning was performed using Low-Rank Adaptation (LoRA) and 4-bit quantization for efficient model adaptation. The model aims to facilitate improved, context-aware, and relevant interactions in medical consultations, enhancing communication and understanding between healthcare providers and patients.
 
-# Developed by: Shailesh Kumar Khanchandani
-# Shared by: Shailesh Kumar Khanchandani
-# Model type: Causal Language Model
-# Language(s) (NLP): English
-# Finetuned from model: google/gemma-2b
+Developed by: **Shailesh Kumar Khanchandani**
+Shared by: **Shailesh Kumar Khanchandani**
+Model type: **Causal Language Model**
+Language(s) (NLP): **English**
+Finetuned from model: **google/gemma-2b**
 
 # Model Sources
 Repository: Fine-Tuned GEMMA-2B
@@ -86,6 +86,19 @@ def generate_text(prompt):
     print("Generated response:")
     print(response)
 
+# Output:
+Generated response:
+**[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
+
+**Output:**
+**- You should consult a surgeon and get a consult with the doctor.**
+**- In the meantime, you can take a nonsteroidal anti-inflammatory drug such as ibuprofen.**
+**- You should avoid walking and exercise until you see the doctor.**
+**- Take the pain medication as needed.**
+**- You can try icing your knee.**
+**- You can use 2-3 pieces of compression stockings to help with the edema.**
+**- You should wear a support shoe.**
+
 # Training Details
 # Training Data
 The training data includes dialogues from the "Doctor-Chat-Dataset," which consists of anonymized conversations between doctors and patients. The dataset was processed to ensure privacy and relevancy.
@@ -112,26 +125,15 @@ The model follows the architecture of a causal language model, finetuned for spe
 Framework: PyTorch
 Libraries: transformers, peft, trl, accelerate, datasets
 
-@article{khanchandani2024fine-tunedgemma,
+**@article{khanchandani2024fine-tunedgemma,
   title={Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization},
   author={Shailesh Kumar Khanchandani},
   year={2024},
   url={https://huggingface.co/skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk}
-}
+}**
 
 APA:
 
-Khanchandani, S. K. (2024). Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization.
+**Khanchandani, S. K. (2024). Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization.**
 
 
-# Output:
-Generated response:
-<s>[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
-
-- You should consult a surgeon and get a consult with the doctor.
-- In the meantime, you can take a nonsteroidal anti-inflammatory drug such as ibuprofen.
-- You should avoid walking and exercise until you see the doctor.
-- Take the pain medication as needed.
-- You can try icing your knee.
-- You can use 2-3 pieces of compression stockings to help with the edema.
-- You should wear a support shoe.
