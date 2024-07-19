@@ -129,7 +129,7 @@ Libraries: transformers, peft, trl, accelerate, datasets
   title={Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization},
   author={Shailesh Kumar Khanchandani},
   year={2024},
-  url={https://huggingface.co/skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk}
+  url={Coming Soon}
 }**
 
 APA:
