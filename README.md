@@ -91,13 +91,11 @@ Generated response:
 **[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
 
 **Output:**
-**- You should consult a surgeon and get a consult with the doctor.**
-**- In the meantime, you can take a nonsteroidal anti-inflammatory drug such as ibuprofen.**
-**- You should avoid walking and exercise until you see the doctor.**
-**- Take the pain medication as needed.**
-**- You can try icing your knee.**
-**- You can use 2-3 pieces of compression stockings to help with the edema.**
-**- You should wear a support shoe.**
+<b>Take care Chat Doctor </b> 
+**- Avoid walking and running to protect your knee .**
+**- Take pain relievers to help reduce pain and swelling .**
+**- Take cold compresses to help reduce pain and swelling .**
+**- Use crutches to assist with walking for a few days  to protect your knee.**
 
 # Training Details
 # Training Data
