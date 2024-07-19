@@ -86,20 +86,6 @@ def generate_text(prompt):
     print("Generated response:")
     print(response)
 
-
-# Output:
-Generated response:
-<s>[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
-
-- You should consult a surgeon and get a consult with the doctor.
-- In the meantime, you can take a nonsteroidal anti-inflammatory drug such as ibuprofen.
-- You should avoid walking and exercise until you see the doctor.
-- Take the pain medication as needed.
-- You can try icing your knee.
-- You can use 2-3 pieces of compression stockings to help with the edema.
-- You should wear a support shoe.
-
-  
 # Training Details
 # Training Data
 The training data includes dialogues from the "Doctor-Chat-Dataset," which consists of anonymized conversations between doctors and patients. The dataset was processed to ensure privacy and relevancy.
@@ -136,3 +122,16 @@ Libraries: transformers, peft, trl, accelerate, datasets
 APA:
 
 Khanchandani, S. K. (2024). Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization.
+
+
+# Output:
+Generated response:
+<s>[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
+
+- You should consult a surgeon and get a consult with the doctor.
+- In the meantime, you can take a nonsteroidal anti-inflammatory drug such as ibuprofen.
+- You should avoid walking and exercise until you see the doctor.
+- Take the pain medication as needed.
+- You can try icing your knee.
+- You can use 2-3 pieces of compression stockings to help with the edema.
+- You should wear a support shoe.
