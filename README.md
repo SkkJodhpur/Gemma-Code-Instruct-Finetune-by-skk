@@ -1,11 +1,13 @@
 ---
 library_name: transformers
 tags:
-  - healthcare
-  - doctor-patient interaction
-  - fine-tuning
-  - LoRA
-  - quantization
+- healthcare
+- doctor-patient interaction
+- fine-tuning
+- LoRA
+- quantization
+language:
+- en
 ---
 
 
@@ -84,3 +86,40 @@ def generate_text(prompt):
     print("Generated response:")
     print(response)
 
+
+# Training Details
+# Training Data
+The training data includes dialogues from the "Doctor-Chat-Dataset," which consists of anonymized conversations between doctors and patients. The dataset was processed to ensure privacy and relevancy.
+
+# Training Procedure
+# Preprocessing
+The input texts were tokenized using AutoTokenizer from the transformers library. The dataset was mapped to the tokenized format and formatted appropriately for causal language modeling.
+
+# Training Hyperparameters
+Training regime: Mixed precision (fp16)
+Batch size: 1
+Gradient accumulation steps: 4
+Warmup steps: 0.03
+Max steps: 100
+Learning rate: 2e-4
+Optimizer: PagedAdamW (8-bit)
+Save strategy: Per epoch
+
+# Technical Specifications
+Model Architecture and Objective
+The model follows the architecture of a causal language model, finetuned for specific tasks using parameter-efficient fine-tuning techniques (LoRA) and quantized to 4-bit precision for efficient deployment.
+
+# Software
+Framework: PyTorch
+Libraries: transformers, peft, trl, accelerate, datasets
+
+@article{khanchandani2024fine-tunedgemma,
+  title={Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization},
+  author={Shailesh Kumar Khanchandani},
+  year={2024},
+  url={https://huggingface.co/skkjodhpur/Gemma-Code-Instruct-Finetune-by-skk}
+}
+
+APA:
+
+Khanchandani, S. K. (2024). Fine-Tuning GEMMA-2B for Doctor-Patient Interaction: Efficient Model Adaptation Using LoRA and 4-bit Quantization.
