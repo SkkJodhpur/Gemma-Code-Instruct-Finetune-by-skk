@@ -46,7 +46,8 @@ Users should ensure that outputs are reviewed by qualified healthcare profession
 
 Use the code below to get started with the model:
 
-# python
+# Python Code
+
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
@@ -60,7 +61,7 @@ def generate_text(prompt):
     device = "cuda" if torch.cuda.is_available() else "cpu"
     model = model.to(device)
 
-        # Tokenize input
+    # Tokenize input
     input_ids = tokenizer.encode(f"<s>[INST] {prompt} [/INST]", return_tensors="pt").to(device)
 
     # Generate text
@@ -76,8 +77,10 @@ def generate_text(prompt):
     # Decode and return the generated text
     generated_text = tokenizer.decode(output[0], skip_special_tokens=True)
     return generated_text
+
     # Example usage
     prompt = "Write a Python function to calculate the factorial of a number."
     response = generate_text(prompt)
     print("Generated response:")
     print(response)
+
