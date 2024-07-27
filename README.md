@@ -6,6 +6,8 @@ tags:
 - fine-tuning
 - LoRA
 - quantization
+datasets:
+  - skkjodhpur/Doctor-Chat-Dataset
 language:
 - en
 ---
