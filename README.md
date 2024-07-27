@@ -49,7 +49,7 @@ Users should ensure that outputs are reviewed by qualified healthcare profession
 Use the code below to get started with the model:
 
 # Python Code
-
+```
 from transformers import AutoModelForCausalLM, AutoTokenizer
 import torch
 
@@ -85,7 +85,7 @@ def generate_text(prompt):
     response = generate_text(prompt)
     print("Generated response:")
     print(response)
-
+```
 # Output:
 Generated response:
 **[INST] I fell on uneven sidewalk on July 3rd and hurt my knee: I had no problem walking and I didn t have much pain just bruising on my knee with tenderness. Now as the bruising is entering the purple/green phase I am starting to get a lot of swelling in my calf and ankle- what should I do ?? [/INST]**
